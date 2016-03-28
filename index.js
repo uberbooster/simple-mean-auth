@@ -22,7 +22,7 @@ var server = express();
 // require routes
 var routes = require('./server/routes/auth.routes.js');
 
-server.set('port', process.env.PORT || 5000);
+server.set('port', process.env.PORT || 3000);
 // define middleware
 server.use(logger);
 server.use(bodyParser.json());
