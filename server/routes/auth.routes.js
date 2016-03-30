@@ -29,6 +29,10 @@ router.post('/login', function(req, res, next) {
 
 router.get('/logout', function(req, res) {
   //Logout route
+  req.logout();
+  res.status(200).json({
+    status: 'You are now logged out!'
+  })
 });
 
 router.get('/status', function(req, res) {
