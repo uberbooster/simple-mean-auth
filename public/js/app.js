@@ -35,5 +35,5 @@ angular.module('myApp')
       $location.path('/login')
       $route.reload(); // Telling the router there has been a change
     }
-  };)
+  });
 });
