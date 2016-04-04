@@ -13,15 +13,12 @@ function AuthService($q, $timeout, $http) {
     register:register
   };
   function isLoggedIn(){
-    if(user){
-      return true;
-    }else{
-      return false;
-    }
+      return user;
   }
   function getUserStatus(){
     $http.get('/user/status')
          .then(function(response){
+           console.log(response.data.status);
            if(response.data.status){
              user = true;
            }else{
